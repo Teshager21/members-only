@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 gem 'devise', '~> 4.7', '>= 4.7.2'
 
+gem 'bootstrap', '~> 4.0'
 gem 'hirb'
 gem 'rubocop', '~>0.81.0'
 # Use Active Storage variant
