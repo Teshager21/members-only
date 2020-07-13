@@ -1,9 +1,12 @@
-<h1>Posts</h1>
-<ul>
+<h1 class='title'>Posts</h1>
+<ul class='container'>
   <% @posts.each do |post| %>
-    <li><%= post.body %></li>
-    <small>created by <%= post.user.name %></small>
+    <li class="card m-3 lead p-3"><%= post.body %>
+    <%if signed_in?%>
+    <p>created by <%= post.user.name %></p>
+    <%end%>
+    </li>
   <% end %>
 
 </ul>
-<%= link_to  "Add Post", new_post_path%>
+<%= link_to  "Add Post", new_post_path, class:'btn btn-info'%>
