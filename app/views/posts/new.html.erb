@@ -1,9 +1,16 @@
 <%= form_for @post do |f| %>
 <div class="container">
- <form-field>
+<% if @post.errors%>
+<%@post.errors.full_messages.each do |error| %>
+ <div class='alert alert-danger'> <%=error%></div>
+<%end%>
+<%end%>
+ <div class='form-group'>
   <%= f.label :body, "Post",class:'form-control' %>
   <%= f.text_field :body ,class:"form-control"%>
- </form-field>
- <%= f.submit class:"btn btn-primary" %>
+ </div class='form-group'>
+ <form-group>
+ <%= f.submit class:"btn btn-primary form-control" %>
+ </form-group>
 </div>
 <% end %>
