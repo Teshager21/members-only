@@ -1,9 +1,15 @@
 <h1>Posts</h1>
-<ul>
+<ul class="container">
   <% @posts.each do |post| %>
-    <li class="lead"><%= post.body %></li>
-    <small>created by @<%= post.user.name %></small>
-  <% end %>
+      <li class="lead list-group-item m-3">
+      <p>
+      <%= post.body %>
+      </p>
+      <%if signed_in?%>
+      <p>By: <%= post.user.name %></p>
+      <%end%>
+    <% end %>
+    </li>
 
 </ul>
 
