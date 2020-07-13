@@ -11,6 +11,7 @@ class PostsController < ApplicationController
       redirect_to posts_path
     else
       render 'new'
+      enda
     end
   end
 
