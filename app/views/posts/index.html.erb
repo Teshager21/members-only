@@ -2,7 +2,8 @@
 <ul>
   <% @posts.each do |post| %>
     <li><%= post.body %></li>
-    <small>created by @<%= post.user.email %></small>
+    <small>created by <%= post.user.name %></small>
   <% end %>
 
 </ul>
+<%= link_to  "Add Post", new_post_path%>
