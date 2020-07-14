@@ -23,15 +23,8 @@
       </ul>
       
       <ul class="navbar-nav ml-auto">
-        <%if !signed_in?%>
-        <%= link_to  "Login", new_user_session_path ,class:"nav-item nav-link"%>
-        <%= link_to  "Signup ", new_user_registration_path ,class:"nav-item nav-link"%>
-  
-     <%else%>
-
-    <%= link_to  "Logout", destroy_user_session_path , method: :delete, data: {confimation: "are you sure?"}, class:"nav-item" %>
-      
-      <%end%>
+      <%=registration_and_session_links %>
+      <%=signed_in_link%>
     </ul>
     </div>
   </nav>
