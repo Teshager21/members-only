@@ -12,4 +12,12 @@ module ApplicationHelper
   def signed_in_link
     link_to 'Login', new_user_session_path, class: 'nav-item nav-link' unless signed_in?
   end
+
+  def error_flashes
+    if flash[:success]
+      content_tag(:p, '<%= notice %>', class: 'alert alert-success')
+    elsif flash[:alert]
+      content_tag(:p, '<%= alert %>', class: 'alert alert-danger')
+    end
+  end
 end

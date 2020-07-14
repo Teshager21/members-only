@@ -28,14 +28,9 @@
     </ul>
     </div>
   </nav>
-   <%if flash[:success]%>
-    <div class='container'>
-      <div class="notice"><%= notice %></p>
-      <%elsif flash[:alert]%>
-      <p class="alert"><%= alert %></p>
-    </div>
-    <%end%>
-
+  <div class='container'>
+  <%=error_flashes%>
+</div>
   <div class="container">  <%= yield %></div>
 
   </body>
