@@ -1,0 +1,10 @@
+<h1 class='title'>Posts</h1>
+<ul class='container'>
+  <% @posts.each do |post| %>
+    <li class="card m-3 lead p-3"><%= post.body %>
+    <%=poster(post)%>
+    </li>
+  <% end %>
+
+</ul>
+<%= link_to  "Add Post", new_post_path, class:'btn btn-info'%>

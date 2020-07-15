@@ -10,6 +10,28 @@
   </head>
 
   <body>
-    <%= yield %>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">MembersOnly</a>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+       
+        <%= link_to  "Home", posts_path ,class:"nav-link" %>
+     </li>
+      </ul>
+      
+      <ul class="navbar-nav ml-auto">
+      <%=registration_and_session_links %>
+      <%=signed_in_link%>
+    </ul>
+    </div>
+  </nav>
+  <div class='container'>
+  <%=error_flashes%>
+</div>
+  <div class="container">  <%= yield %></div>
+
   </body>
 </html>
